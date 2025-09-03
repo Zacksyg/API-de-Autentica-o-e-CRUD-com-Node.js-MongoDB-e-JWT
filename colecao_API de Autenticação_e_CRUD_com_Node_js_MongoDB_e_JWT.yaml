@@ -1,0 +1,270 @@
+type: collection.insomnia.rest/5.0
+name: API de Autenticação e CRUD com Node.js, MongoDB e JWT
+meta:
+  id: wrk_319c97fc4a3744439afb6888b493637f
+  created: 1752601897642
+  modified: 1756927916577
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_fbea7de1b40c40a0a3de8807a51c37af
+      created: 1756927932638
+      modified: 1756927932638
+      sortKey: -1756927932638
+      description: ""
+    children:
+      - url: http://localhost:3000/auth/register
+        name: "[POST] Register User"
+        meta:
+          id: req_1b23fbe1ed2f434b9fbe6e799f916e3f
+          created: 1756921803992
+          modified: 1756928085791
+          isPrivate: false
+          description: ""
+          sortKey: -1756927949811
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Usuario Insomnia",
+              "email": "insomnia@teste.com",
+              "password": "senhaforte123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/auth/login
+        name: "[POST] Login"
+        meta:
+          id: req_279282b1551341f1a6244fb0fb4d4d13
+          created: 1756924122767
+          modified: 1756928106673
+          isPrivate: false
+          description: ""
+          sortKey: -1756927949911
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "insomnia@teste.com",
+              "password": "senhaforte123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/me
+        name: "[GET] Get Me"
+        meta:
+          id: req_46aee372a1314568a81d2b4cd0b95d12
+          created: 1756926044858
+          modified: 1756928143669
+          isPrivate: false
+          description: ""
+          sortKey: -1756927950011
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4ODIzN2U1ZGE3MTQ0MGNmNDdhYzAiLCJpYXQiOjE3NTY5MjYxMDAsImV4cCI6MTc1NjkyNzAwMH0.JyphKAipfNQpGNyeUqNbSb6dFy6HWOPK_CJ2W1KFDkw
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Todos
+    meta:
+      id: fld_ea4686ac2f114305bc7716826737b5f2
+      created: 1756927939379
+      modified: 1756927963688
+      sortKey: -1756927939379
+      description: ""
+    children:
+      - url: http://localhost:3000/todos/68b8957cdac24f608ac9b9b2
+        name: teste node/todos
+        meta:
+          id: req_debcbbeb53c24da1b43cb7c5470f633d
+          created: 1756927285840
+          modified: 1756927970093
+          isPrivate: false
+          description: ""
+          sortKey: -1756927970067
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: '{ "title": "Aprender a proteger rotas (concluído)", "done": true }'
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4ODIzN2U1ZGE3MTQ0MGNmNDdhYzAiLCJpYXQiOjE3NTY5MjczMzgsImV4cCI6MTc1NjkyODIzOH0.oMw5443mmMAq5E9PEfZDXCVwbrVojdRFykMxll-Tbzg
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/todos/
+        name: "[POST] Create Todo"
+        meta:
+          id: req_94a83aa11da84441bf98884eb02d5160
+          created: 1756928168467
+          modified: 1756928301876
+          isPrivate: false
+          description: ""
+          sortKey: -1756927960039
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "title": "Configurar minha collection no Insomnia"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4OTkwNzgzYmJlYTg3MDQzMDBiM2MiLCJpYXQiOjE3NTY5MjgyNjUsImV4cCI6MTc1NjkyOTE2NX0.gBBB1ihSDEKJyivj7yXEcY2nJJ9yoU0qG-Fvzfd7bP4
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/todos/
+        name: "[GET] List All Todos"
+        meta:
+          id: req_156449ead5e04f4dab91fac41c6fd168
+          created: 1756928236721
+          modified: 1756928276013
+          isPrivate: false
+          description: ""
+          sortKey: -1756927955025
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4OTkwNzgzYmJlYTg3MDQzMDBiM2MiLCJpYXQiOjE3NTY5MjgyNjUsImV4cCI6MTc1NjkyOTE2NX0.gBBB1ihSDEKJyivj7yXEcY2nJJ9yoU0qG-Fvzfd7bP4
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/todos/id
+        name: "[GET] Get Todo by ID"
+        meta:
+          id: req_e3534cee6aac4c5da63c7e21b3adb101
+          created: 1756928319486
+          modified: 1756928333807
+          isPrivate: false
+          description: ""
+          sortKey: -1756927952518
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4OTkwNzgzYmJlYTg3MDQzMDBiM2MiLCJpYXQiOjE3NTY5MjgyNjUsImV4cCI6MTc1NjkyOTE2NX0.gBBB1ihSDEKJyivj7yXEcY2nJJ9yoU0qG-Fvzfd7bP4
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/todos/id
+        name: "[PUT] Update Todo"
+        meta:
+          id: req_eb22c5ee89bd4f2ab7cb1a43a926765f
+          created: 1756928352149
+          modified: 1756928361979
+          isPrivate: false
+          description: ""
+          sortKey: -1756927951264.5
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "title": "Collection configurada com sucesso!",
+                "done": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGI4OTkwNzgzYmJlYTg3MDQzMDBiM2MiLCJpYXQiOjE3NTY5MjgyNjUsImV4cCI6MTc1NjkyOTE2NX0.gBBB1ihSDEKJyivj7yXEcY2nJJ9yoU0qG-Fvzfd7bP4
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_91cf3f4860c2c868d019f8193ec9fa7eb3dcd290
+    created: 1752601897646
+    modified: 1752601897646
+environments:
+  name: Base Environment
+  meta:
+    id: env_91cf3f4860c2c868d019f8193ec9fa7eb3dcd290
+    created: 1752601897644
+    modified: 1752601897644
+    isPrivate: false
