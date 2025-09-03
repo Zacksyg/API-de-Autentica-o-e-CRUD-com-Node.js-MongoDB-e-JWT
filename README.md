@@ -79,8 +79,7 @@ Para facilitar os testes, uma collection completa para o Insomnia está disponí
 
 1.  **Importe os arquivos:**
     -   Abra o Insomnia, vá para **Application > Preferences > Data** e clique em **Import Data**.
-    -   Importe o arquivo da collection: `docs/todo-api.collection.json`.
-    -   Importe o arquivo do ambiente: `docs/todo-api.environment.json`.
+    -   Importe o arquivo da collection: `colecao_API de Autenticação_e_CRUD_com_Node_js_MongoDB_e_JWT`.
 
 2.  **Selecione o Ambiente:**
     -   No canto superior esquerdo do Insomnia, certifique-se de que o ambiente **"Desenvolvimento Local"** está selecionado.
