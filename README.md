@@ -45,7 +45,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 ### Variáveis de Ambiente
 
-Antes de iniciar o servidor, crie um arquivo chamado `.env` na raiz do projeto. Copie o conteúdo do arquivo `.env.example` (se houver) ou use o template abaixo, substituindo os valores conforme necessário.
+Antes de iniciar o servidor, crie um arquivo chamado `.env` na raiz do projeto.use o template abaixo, substituindo os valores conforme necessário.
 
 ```
 # Porta em que o servidor irá rodar
